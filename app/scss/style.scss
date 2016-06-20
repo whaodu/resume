@@ -1,3 +1,27 @@
-body{
-	font-size:14px;
+
+
+body,html{
+	height: 100%;
+	width: 100%;
+	margin: 0;
+	padding: 0;
 }
+
+
+.sidebar{
+	background: #6699CC;
+	width:5%;
+	height: 100%;
+	float: left;
+}
+
+.content{
+	float: left;
+	width: 95%;
+	height: 100%;
+}
+
+.swiper-container {
+    width: 95%;
+    height: 100%;
+}  
