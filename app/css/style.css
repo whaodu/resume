@@ -1,8 +1,10 @@
+@charset "UTF-8";
 body, html {
   height: 100%;
   width: 100%;
   margin: 0;
-  padding: 0; }
+  padding: 0;
+  font-family: Avenir-Roman, sans-serif; }
 
 .sidebar {
   background: #6699CC;
@@ -13,8 +15,164 @@ body, html {
 .content {
   float: left;
   width: 95%;
-  height: 100%; }
+  height: 100%;
+  background: #f1f5f8; }
 
 .swiper-container {
-  width: 95%;
+  width: 100%;
   height: 100%; }
+
+.swiper-bg {
+  position: absolute;
+  top: 0;
+  width: 100%;
+  height: 100%; }
+  .swiper-bg .swiper-bg-pic {
+    display: block;
+    width: 40px;
+    height: 40px;
+    position: absolute;
+    opacity: 0.2; }
+  .swiper-bg .bg-1 {
+    background: url("../img/icon-1.png") no-repeat;
+    background-size: 100%;
+    top: 100px;
+    left: 50px;
+    transform: rotate(10deg); }
+  .swiper-bg .bg-2 {
+    background: url("../img/icon-2.png") no-repeat;
+    background-size: 100%;
+    top: 250px;
+    left: 150px;
+    transform: rotate(100deg); }
+  .swiper-bg .bg-3 {
+    background: url("../img/icon-3.png") no-repeat;
+    background-size: 100%;
+    top: 400px;
+    left: 300px;
+    transform: rotate(0deg); }
+  .swiper-bg .bg-4 {
+    background: url("../img/icon-4.png") no-repeat;
+    background-size: 100%;
+    top: 10px;
+    left: 450px;
+    transform: rotate(-10deg); }
+  .swiper-bg .bg-5 {
+    background: url("../img/icon-5.png") no-repeat;
+    background-size: 100%;
+    top: 520px;
+    left: 600px;
+    transform: rotate(-50deg); }
+  .swiper-bg .bg-6 {
+    background: url("../img/icon-6.png") no-repeat;
+    background-size: 100%;
+    top: 150px;
+    left: 750px; }
+  .swiper-bg .bg-7 {
+    background: url("../img/icon-7.png") no-repeat;
+    background-size: 100%;
+    top: 550px;
+    left: 780px; }
+  .swiper-bg .bg-8 {
+    background: url("../img/icon-8.png") no-repeat;
+    background-size: 100%;
+    top: 250px;
+    left: 480px; }
+  .swiper-bg .bg-9 {
+    background: url("../img/icon-9.png") no-repeat;
+    background-size: 100%;
+    top: 300px;
+    left: 950px;
+    transform: rotate(30deg); }
+  .swiper-bg .bg-10 {
+    background: url("../img/icon-12.png") no-repeat;
+    background-size: 100%;
+    top: 580px;
+    left: 120px; }
+  .swiper-bg .bg-11 {
+    background: url("../img/icon-11.png") no-repeat;
+    background-size: 100%;
+    top: 10px;
+    right: 10px;
+    transform: rotate(-60deg); }
+
+.name-block {
+  width: 406px;
+  font-family: Avenir-Black, sans-serif;
+  color: #1957fe;
+  font-size: 60px;
+  position: relative;
+  top: 40%;
+  left: 10%; }
+  .name-block h1 {
+    display: inline; }
+  .name-block .top-line-1 {
+    width: 80px;
+    height: 5px;
+    background: #1957fe;
+    position: absolute;
+    top: 0;
+    border-radius: 50px; }
+  .name-block .top-line-2 {
+    width: 60px;
+    height: 5px;
+    background: #1957fe;
+    position: absolute;
+    top: 10px;
+    border-radius: 50px; }
+  .name-block .bottom-line-1 {
+    width: 60px;
+    height: 5px;
+    background: #1957fe;
+    position: absolute;
+    bottom: 15px;
+    right: 0;
+    border-radius: 50px; }
+  .name-block .bottom-line-2 {
+    width: 80px;
+    height: 5px;
+    background: #1957fe;
+    position: absolute;
+    bottom: 5px;
+    right: 0;
+    border-radius: 50px; }
+
+.page-2 .catalog-title {
+  height: 40px;
+  width: 200px;
+  background: #fff;
+  position: absolute;
+  right: -42px;
+  top: 23px;
+  transform: rotate(41deg);
+  box-shadow: 10px 0px 10px #a4a6a7 inset, 0px 0px 0px #fff inset, 0px 0px 0px #fff inset, 0px 0px 0px #fff inset; }
+
+.page .page-content {
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  border: 0;
+  bottom: 0px;
+  margin: auto;
+  overflow: hidden;
+  width: 800px;
+  height: 250px; }
+  .page .page-content .content-logo {
+    width: 320px;
+    height: 180px;
+    float: left;
+    background: #fff; }
+  .page .page-content .content-detail {
+    float: left;
+    width: 360px;
+    height: 220px;
+    margin: 0 0 0 100px;
+    color: #203239; }
+    .page .page-content .content-detail h3 {
+      margin: 0; }
+    .page .page-content .content-detail p {
+      font-size: 14px; }
+      .page .page-content .content-detail p:before {
+        content: '·';
+        margin: 0 5px 0 0; }
