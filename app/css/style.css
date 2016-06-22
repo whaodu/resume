@@ -7,14 +7,63 @@ body, html {
   font-family: Avenir-Roman, sans-serif; }
 
 .sidebar {
-  background: #6699CC;
-  width: 5%;
+  position: fixed;
+  left: 0;
+  background: #324252;
+  width: 60px;
   height: 100%;
-  float: left; }
+  float: left;
+  font-size: 30px;
+  text-align: center;
+  line-height: 60px;
+  color: #fff;
+  z-index: 100; }
+  .sidebar .top {
+    width: 60px;
+    height: 60px;
+    background: #1957fe; }
+  .sidebar .page-num-list {
+    list-style: none;
+    padding: 0;
+    overflow: hidden; }
+    .sidebar .page-num-list li {
+      width: 60px;
+      height: 60px;
+      text-align: center;
+      line-height: 60px;
+      font-size: 20px;
+      cursor: pointer; }
+      .sidebar .page-num-list li:before {
+        display: block;
+        position: absolute;
+        width: 60px;
+        height: 60px;
+        background: #324252; }
+      .sidebar .page-num-list li:nth-child(1):before {
+        content: '1';
+        transition: all 0.4s cubic-bezier(0.615, 0.19, 0.305, 0.91);
+        -webkit-transition: all 0.4s cubic-bezier(0.615, 0.19, 0.305, 0.91); }
+      .sidebar .page-num-list li:nth-child(1):hover::before {
+        background: #6d6363;
+        transform: rotate3d(0, 1, 0, 360deg); }
+      .sidebar .page-num-list li:nth-child(2):before {
+        content: '2';
+        transition: all 0.4s cubic-bezier(0.615, 0.19, 0.305, 0.91);
+        -webkit-transition: all 0.4s cubic-bezier(0.615, 0.19, 0.305, 0.91); }
+      .sidebar .page-num-list li:nth-child(2):hover::before {
+        background: #ccc;
+        transform: rotate3d(0, 1, 0, 360deg); }
+      .sidebar .page-num-list li:nth-child(3):before {
+        content: '3';
+        transition: all 0.4s cubic-bezier(0.615, 0.19, 0.305, 0.91);
+        -webkit-transition: all 0.4s cubic-bezier(0.615, 0.19, 0.305, 0.91); }
+      .sidebar .page-num-list li:nth-child(3):hover::before {
+        background: #ccc;
+        transform: rotate3d(0, 1, 0, 360deg); }
 
 .content {
   float: left;
-  width: 95%;
+  width: 100%;
   height: 100%;
   background: #f1f5f8; }
 
@@ -38,31 +87,36 @@ body, html {
     background-size: 100%;
     top: 100px;
     left: 50px;
-    transform: rotate(10deg); }
+    transform: rotate(10deg);
+    -webkit-transform: rotate(10deg); }
   .swiper-bg .bg-2 {
     background: url("../img/icon-2.png") no-repeat;
     background-size: 100%;
     top: 250px;
     left: 150px;
-    transform: rotate(100deg); }
+    transform: rotate(100deg);
+    -webkit-transform: rotate(100deg); }
   .swiper-bg .bg-3 {
     background: url("../img/icon-3.png") no-repeat;
     background-size: 100%;
     top: 400px;
     left: 300px;
-    transform: rotate(0deg); }
+    transform: rotate(2deg);
+    -webkit-transform: rotate(2deg); }
   .swiper-bg .bg-4 {
     background: url("../img/icon-4.png") no-repeat;
     background-size: 100%;
     top: 10px;
     left: 450px;
-    transform: rotate(-10deg); }
+    transform: rotate(-10deg);
+    -webkit-transform: rotate(-10deg); }
   .swiper-bg .bg-5 {
     background: url("../img/icon-5.png") no-repeat;
     background-size: 100%;
     top: 520px;
     left: 600px;
-    transform: rotate(-50deg); }
+    transform: rotate(-50deg);
+    -webkit-transform: rotate(-50deg); }
   .swiper-bg .bg-6 {
     background: url("../img/icon-6.png") no-repeat;
     background-size: 100%;
@@ -83,7 +137,8 @@ body, html {
     background-size: 100%;
     top: 300px;
     left: 950px;
-    transform: rotate(30deg); }
+    transform: rotate(30deg);
+    -webkit-transform: rotate(30deg); }
   .swiper-bg .bg-10 {
     background: url("../img/icon-12.png") no-repeat;
     background-size: 100%;
@@ -94,7 +149,8 @@ body, html {
     background-size: 100%;
     top: 10px;
     right: 10px;
-    transform: rotate(-60deg); }
+    transform: rotate(-60deg);
+    -webkit-transform: rotate(-60deg); }
 
 .name-block {
   width: 406px;
@@ -137,6 +193,196 @@ body, html {
     right: 0;
     border-radius: 50px; }
 
+.page {
+  overflow: hidden; }
+  .page .page-content {
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    border: 0;
+    bottom: 0px;
+    margin: auto;
+    overflow: hidden;
+    width: 800px;
+    height: 280px; }
+    .page .page-content .content-logo {
+      width: 320px;
+      height: 180px;
+      float: left;
+      background: #fff; }
+    .page .page-content .content-detail {
+      float: left;
+      width: 360px;
+      height: 220px;
+      margin: 0 0 0 100px;
+      color: #203239; }
+      .page .page-content .content-detail h3 {
+        margin: 0; }
+      .page .page-content .content-detail p {
+        font-size: 14px; }
+        .page .page-content .content-detail p:before {
+          content: '·';
+          margin: 0 5px 0 0;
+          font-weight: 900; }
+    .page .page-content .next {
+      float: right; }
+      .page .page-content .next .next-page-line {
+        position: relative;
+        float: left;
+        line-height: 50px;
+        margin: 0 20px;
+        width: 130px;
+        text-align: right;
+        color: #021e67;
+        overflow: hidden;
+        transition: all 0.2s cubic-bezier(0.615, 0.19, 0.305, 0.91);
+        -webkit-transition: all 0.2s cubic-bezier(0.615, 0.19, 0.305, 0.91); }
+        .page .page-content .next .next-page-line:before {
+          content: "——";
+          position: absolute;
+          left: 0px;
+          margin: 0 10px 0 0;
+          overflow: hidden;
+          transition: all 0.4s cubic-bezier(0.615, 0.19, 0.305, 0.91);
+          transition: all 0.4s cubic-bezier(0.615, 0.19, 0.305, 0.91); }
+        .page .page-content .next .next-page-line:hover::before {
+          transform: translate3d(500%, 0, 0); }
+      .page .page-content .next .next-page {
+        width: 50px;
+        height: 50px;
+        border: 2px solid #33475f;
+        border-radius: 50%;
+        float: right;
+        cursor: pointer;
+        overflow: hidden;
+        position: relative;
+        transition: all 0.5s cubic-bezier(0.615, 0.19, 0.305, 0.91);
+        -webkit-transition: all 0.5s cubic-bezier(0.615, 0.19, 0.305, 0.91); }
+        .page .page-content .next .next-page:hover {
+          background: #33475f; }
+        .page .page-content .next .next-page:before {
+          content: url("../img/icon-down.svg");
+          display: block;
+          position: absolute;
+          top: 50%;
+          left: 50%;
+          margin: -8px 0 0 -8px;
+          overflow: hidden;
+          transition: all 0.5s cubic-bezier(0.615, 0.19, 0.305, 0.91);
+          -webkit-transition: all 0.5s cubic-bezier(0.615, 0.19, 0.305, 0.91); }
+        .page .page-content .next .next-page:hover::before {
+          transform: translate3d(0, 200%, 0); }
+        .page .page-content .next .next-page:after {
+          content: url("../img/icon-down-1.svg");
+          position: absolute;
+          top: 50%;
+          left: 50%;
+          margin: -8px 0 0 -8px;
+          transform: translate3d(0, 200%, 0);
+          transition: all 0.2s cubic-bezier(0.615, 0.19, 0.305, 0.91); }
+        .page .page-content .next .next-page:hover::after {
+          transform: translate3d(0, 0, 0); }
+
+.page-1 .float-graph {
+  position: fixed;
+  top: 0;
+  width: 100%;
+  height: 100%; }
+  .page-1 .float-graph .graph-1 {
+    width: 20px;
+    height: 20px;
+    display: block;
+    position: absolute;
+    background: rgba(60, 105, 61, 0.42);
+    left: 278px;
+    top: 36px;
+    transform: rotate(9deg); }
+  .page-1 .float-graph .graph-2 {
+    width: 35px;
+    height: 35px;
+    display: block;
+    position: absolute;
+    border-radius: 50%;
+    background: red;
+    left: 880px;
+    top: 230px; }
+  .page-1 .float-graph .graph-3 {
+    display: block;
+    position: absolute;
+    width: 0;
+    height: 0;
+    border-left: 20px solid transparent;
+    border-right: 20px solid transparent;
+    border-bottom: 25px solid #ffcccc;
+    left: 550px;
+    top: 200px;
+    transform: rotate(55deg); }
+  .page-1 .float-graph .graph-4 {
+    width: 30px;
+    height: 30px;
+    display: block;
+    position: absolute;
+    left: 80px;
+    top: 200px; }
+  .page-1 .float-graph .graph-5 {
+    width: 21px;
+    height: 21px;
+    display: block;
+    position: absolute;
+    background: #7d4f00;
+    left: 650px;
+    top: 250px;
+    opacity: 0.5;
+    transform: rotate(155deg); }
+  .page-1 .float-graph .graph-6 {
+    width: 40px;
+    height: 40px;
+    display: block;
+    position: absolute;
+    border-radius: 50%;
+    background: rgba(184, 255, 0, 0.83);
+    left: 563px;
+    top: 178px; }
+  .page-1 .float-graph .graph-7 {
+    width: 30px;
+    height: 30px;
+    display: block;
+    position: absolute;
+    border-radius: 50%;
+    background: #00e1c3;
+    left: 985px;
+    top: 30px; }
+  .page-1 .float-graph .graph-8 {
+    width: 45px;
+    height: 45px;
+    display: block;
+    position: absolute;
+    border-radius: 50%;
+    background: #ffb147;
+    left: 785px;
+    top: 430px; }
+  .page-1 .float-graph .graph-9 {
+    display: block;
+    position: absolute;
+    width: 0;
+    height: 0;
+    border-left: 20px solid transparent;
+    border-right: 20px solid transparent;
+    border-bottom: 25px solid #2fd4b5;
+    left: 85px;
+    top: 530px;
+    transform: rotate(-150deg); }
+  .page-1 .float-graph .graph-10 {
+    width: 25px;
+    height: 25px;
+    display: block;
+    position: absolute;
+    border-radius: 50%;
+    background: #ffb147;
+    left: 125px;
+    top: 130px; }
+
 .page-2 .catalog-title {
   height: 40px;
   width: 200px;
@@ -147,32 +393,8 @@ body, html {
   transform: rotate(41deg);
   box-shadow: 10px 0px 10px #a4a6a7 inset, 0px 0px 0px #fff inset, 0px 0px 0px #fff inset, 0px 0px 0px #fff inset; }
 
-.page .page-content {
-  position: absolute;
-  top: 0;
-  left: 0;
-  right: 0;
-  border: 0;
-  bottom: 0px;
-  margin: auto;
-  overflow: hidden;
-  width: 800px;
-  height: 250px; }
-  .page .page-content .content-logo {
-    width: 320px;
-    height: 180px;
-    float: left;
-    background: #fff; }
-  .page .page-content .content-detail {
-    float: left;
-    width: 360px;
-    height: 220px;
-    margin: 0 0 0 100px;
-    color: #203239; }
-    .page .page-content .content-detail h3 {
-      margin: 0; }
-    .page .page-content .content-detail p {
-      font-size: 14px; }
-      .page .page-content .content-detail p:before {
-        content: '·';
-        margin: 0 5px 0 0; }
+@-webkit-keyframes 'hightdown' {
+  from { }
+  to {
+    background-size: 35%;
+    background: url("../img/icon-down-white.png") no-repeat center; } }
