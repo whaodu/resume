@@ -7,7 +7,7 @@ var jshint = require('gulp-jshint');
 gulp.task('server',['sass'],function(){
 	browserSync.init({
 		server:{
-			baseDir:'./app'
+			baseDir:'./'
 		}
 	});
 
