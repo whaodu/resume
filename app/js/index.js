@@ -41,19 +41,55 @@ var graphFloat = function(event,el){
 
 }
 
+var logoFloat = function(event,el){
+    var x = $(el).offset().left;
+    var y = $(el).offset().top;
+    var px = event.pageX;
+    var py = event.pageY;
+    var zx = parseInt(px-x);
+    var zy = parseInt(py-y);
+    var changeX = (320/2-zx)/10;
+    var changeY = (200/2-zy)/8;
+    console.log(changeX,changeY,event);
+    el.css("transform","rotateX("+changeX+"deg) rotateY("+changeY+"deg) ");
+}
+
 
 var changePosition = function(){
-    var page = $('.page-1');
+    var $page = $('.page-1');
     var $content = $('.content');
-    var swiper_page = $('.swiper-bg');
-    var graph = $('.float-graph');
+    var $swiper_page = $('.swiper-bg');
+    var $graph = $('.float-graph');
+    var $company_logo = $('.company-logo');
 
     $content.on('mousemove',function(event){
-        mouseFloat(event,swiper_page);
+        mouseFloat(event,$swiper_page);
     })
+    
     $content.on('mousemove',function(event){
-        graphFloat(event,graph);  
+        graphFloat(event,$graph);  
     })
+
+    
+
+    // $(document).on('mousemove',$company_logo,function(event){
+    //     // if($company_logo.hasClass('hover')){
+            
+    //     // }
+    //     $company_logo.hover(function(){
+    //         // $company_logo.addClass('hover');
+    //         // logoFloat(event,$company_logo);
+    //         $company_logo.css("transform","translateX(0px)"); 
+    //         $company_logo.css("transform","scale3d(1.1,1.1,1.3)");
+    //         $company_logo.css("box-shadow","5px 5px 15px #9c9999");
+    //     },function(){
+    //         $company_logo.removeClass('hover');
+    //         $company_logo.css("transform","scale3d(1,1,1)");
+    //         $company_logo.css("box-shadow","none");
+    //     })
+
+    // })
+
 };
 
 
