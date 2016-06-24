@@ -8,6 +8,7 @@ var swiper = new Swiper('.swiper-container', {
     paginationClickable: true,
     spaceBetween: 30,
     mousewheelControl: true,
+    touchRatio:0.2,
     onSliderMove:function(swiper,event){
         console.log('fff');
         console.log(swiper);
@@ -64,7 +65,7 @@ var changePosition = function(){
     var $page = $('.page-1');
     var $content = $('.content');
     var $swiper_page = $('.swiper-bg');
-    var $graph = $('.float-graph');
+    var $graph = $('.page-1 .float-graph');
     var $company_logo = $('.company-logo');
 
     $content.on('mousemove',function(event){
@@ -112,6 +113,12 @@ var changePosition = function(){
         })
         $('.next-page').on('click',function(e){
             swiper.slideNext();
+        })
+        $('.bottom').on('click',function(e){
+            swiper.slideTo(5);
+        })
+        $('.top').on('click',function(e){
+            swiper.slideTo(0);
         })
 
     })()

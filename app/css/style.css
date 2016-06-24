@@ -23,6 +23,14 @@ body, html {
     height: 60px;
     background: #1957fe;
     cursor: pointer; }
+  .sidebar .bottom {
+    width: 60px;
+    height: 60px;
+    background: url("../img/icon-email-white.png") #1957fe no-repeat center;
+    background-size: 50%;
+    cursor: pointer;
+    position: absolute;
+    bottom: 0; }
   .sidebar .page-num-list {
     list-style: none;
     padding: 0;
@@ -328,12 +336,11 @@ body, html {
         .page .page-content .next .next-page:hover::after {
           transform: translate3d(0, 0, 0); }
 
-.page-1 .float-graph {
+.page-1 .float-graph, .page-6 .float-graph {
   position: fixed;
-  top: 0;
   width: 100%;
   height: 100%; }
-  .page-1 .float-graph .graph-1 {
+  .page-1 .float-graph .graph-1, .page-6 .float-graph .graph-1 {
     width: 20px;
     height: 20px;
     display: block;
@@ -342,7 +349,7 @@ body, html {
     left: 278px;
     top: 36px;
     transform: rotate(9deg); }
-  .page-1 .float-graph .graph-2 {
+  .page-1 .float-graph .graph-2, .page-6 .float-graph .graph-2 {
     width: 35px;
     height: 35px;
     display: block;
@@ -351,7 +358,7 @@ body, html {
     background: red;
     left: 880px;
     top: 230px; }
-  .page-1 .float-graph .graph-3 {
+  .page-1 .float-graph .graph-3, .page-6 .float-graph .graph-3 {
     display: block;
     position: absolute;
     width: 0;
@@ -362,14 +369,14 @@ body, html {
     left: 550px;
     top: 200px;
     transform: rotate(55deg); }
-  .page-1 .float-graph .graph-4 {
+  .page-1 .float-graph .graph-4, .page-6 .float-graph .graph-4 {
     width: 30px;
     height: 30px;
     display: block;
     position: absolute;
     left: 80px;
     top: 200px; }
-  .page-1 .float-graph .graph-5 {
+  .page-1 .float-graph .graph-5, .page-6 .float-graph .graph-5 {
     width: 21px;
     height: 21px;
     display: block;
@@ -379,7 +386,7 @@ body, html {
     top: 250px;
     opacity: 0.5;
     transform: rotate(155deg); }
-  .page-1 .float-graph .graph-6 {
+  .page-1 .float-graph .graph-6, .page-6 .float-graph .graph-6 {
     width: 40px;
     height: 40px;
     display: block;
@@ -388,7 +395,7 @@ body, html {
     background: rgba(184, 255, 0, 0.83);
     left: 563px;
     top: 178px; }
-  .page-1 .float-graph .graph-7 {
+  .page-1 .float-graph .graph-7, .page-6 .float-graph .graph-7 {
     width: 30px;
     height: 30px;
     display: block;
@@ -397,7 +404,7 @@ body, html {
     background: #00e1c3;
     left: 985px;
     top: 30px; }
-  .page-1 .float-graph .graph-8 {
+  .page-1 .float-graph .graph-8, .page-6 .float-graph .graph-8 {
     width: 45px;
     height: 45px;
     display: block;
@@ -406,7 +413,7 @@ body, html {
     background: #ffb147;
     left: 785px;
     top: 430px; }
-  .page-1 .float-graph .graph-9 {
+  .page-1 .float-graph .graph-9, .page-6 .float-graph .graph-9 {
     display: block;
     position: absolute;
     width: 0;
@@ -417,7 +424,7 @@ body, html {
     left: 85px;
     top: 530px;
     transform: rotate(-150deg); }
-  .page-1 .float-graph .graph-10 {
+  .page-1 .float-graph .graph-10, .page-6 .float-graph .graph-10 {
     width: 25px;
     height: 25px;
     display: block;
@@ -515,6 +522,43 @@ body, html {
 .skill-2-light:after {
   content: url("../img/icon-19-light.svg");
   position: absolute; }
+
+.page-6 .pic {
+  position: relative;
+  top: 20%;
+  text-align: center; }
+  .page-6 .pic img {
+    width: 160px;
+    height: 160px;
+    border-radius: 50%;
+    border: 4px solid #fff;
+    box-shadow: 0px 5px 5px #827f7f; }
+
+.page-6 .info {
+  text-align: center;
+  position: relative;
+  top: 30%;
+  color: #324252; }
+  .page-6 .info h3 {
+    margin: 10px; }
+  .page-6 .info p {
+    margin: 0;
+    z-index: 1000; }
+  .page-6 .info .email {
+    font-family: "Avenir-Black",sans-serif; }
+    .page-6 .info .email:before {
+      content: url("../img/icon-email.svg");
+      position: relative;
+      top: 10px;
+      margin: 0 10px; }
+
+.page-6 .float-graph .graph-3 {
+  top: 450px;
+  left: 220px; }
+
+.page-6 .float-graph .graph-6 {
+  top: 160px;
+  left: 500px; }
 
 @-webkit-keyframes 'hightdown' {
   from {

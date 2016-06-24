@@ -30,6 +30,15 @@ body,html{
 		background: $titleBlue;
 		cursor: pointer;
 	}
+    .bottom{
+        width: 60px;
+        height: 60px;
+        background: url('../img/icon-email-white.png') $titleBlue no-repeat center;
+        background-size: 50%;
+        cursor: pointer;
+        position: absolute;
+        bottom: 0;
+    }
 	.page-num-list{
 		list-style: none;
 		padding: 0;
@@ -409,10 +418,10 @@ body,html{
 	}
 }
 
-.page-1{
+.page-1,.page-6{
 	.float-graph{
 		position: fixed;
-		top:0;
+		// top:0;
 		width: 100%;
 		height: 100%;
 		.graph-1{
@@ -630,6 +639,49 @@ body,html{
 	position: absolute;
 }
 
+.page-6{
+    .pic{
+        position: relative;
+        top: 20%;
+        text-align: center;
+        img{
+            width: 160px;
+            height: 160px;
+            border-radius: 50%;
+            border: 4px solid #fff;
+            box-shadow: 0px 5px 5px #827f7f;
+        }
+    }
+	.info{
+		text-align: center;
+	    position: relative;
+	    top: 30%;
+	    color: #324252;
+        h3{margin: 10px;}
+        p{
+            margin: 0;
+            z-index: 1000;
+        }
+		.interest{
+
+		}
+		.email{
+            font-family: "Avenir-Black",sans-serif;
+			&:before{
+				content: url("../img/icon-email.svg");
+			    position: relative;
+			    top: 10px;
+			    margin: 0 10px;
+			}
+		}
+	}
+    .float-graph .graph-3{
+        top:450px;left: 220px;
+    }
+    .float-graph .graph-6{
+        top:160px;left: 500px;
+    }
+}
 
 
 
