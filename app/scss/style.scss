@@ -28,6 +28,7 @@ body,html{
 		width: 60px;
 		height: 60px;
 		background: $titleBlue;
+		cursor: pointer;
 	}
 	.page-num-list{
 		list-style: none;
@@ -73,6 +74,15 @@ body,html{
 				-webkit-transition: all 0.4s cubic-bezier(0.615, 0.19, 0.305, 0.91);
 			}
 			&:nth-child(3):hover::before{
+				background: #ccc;
+				transform:rotate3d(0,1,0,360deg);
+			}
+			&:nth-child(4):before{
+				content: '4';
+				transition: all 0.4s cubic-bezier(0.615, 0.19, 0.305, 0.91);
+				-webkit-transition: all 0.4s cubic-bezier(0.615, 0.19, 0.305, 0.91);
+			}
+			&:nth-child(4):hover::before{
 				background: #ccc;
 				transform:rotate3d(0,1,0,360deg);
 			}
@@ -196,6 +206,11 @@ body,html{
 	    position: absolute;
 	    top: 0;
 	    border-radius: 50px;
+	    -webkit-animation-name:'line-1';
+		-webkit-animation-duration: 1s;
+		-webkit-animation-timing-function: ease-in-out;
+		// -webkit-animation-iteration-count: 10;/*定义循环资料，infinite为无限次*/
+		// -webkit-animation-direction: alternate;/*定义动画方式*/
 	}
 	.top-line-2{
 		width: 60px;
@@ -204,6 +219,9 @@ body,html{
 	    position: absolute;
 	    top: 10px;
 	    border-radius: 50px;
+	    -webkit-animation-name:'line-1';
+		-webkit-animation-duration: 1s;
+		-webkit-animation-timing-function: ease-in-out;
 	}
 	.bottom-line-1{
 		width: 60px;
@@ -213,6 +231,9 @@ body,html{
 	   	bottom: 15px;
 	   	right: 0;
 	    border-radius: 50px;
+	    -webkit-animation-name:'line-1';
+		-webkit-animation-duration: 1s;
+		-webkit-animation-timing-function: ease-in-out;
 	}
 	.bottom-line-2{
 		width: 80px;
@@ -222,12 +243,31 @@ body,html{
 	    bottom: 5px;
 	    right: 0;
 	    border-radius: 50px;
+	    -webkit-animation-name:'line-1';
+		-webkit-animation-duration: 1s;
+		-webkit-animation-timing-function: ease-in-out;
 	}
 
 
 }
 .page{
 	overflow: hidden;
+	.catalog-title{
+			height: 40px;
+		    width: 200px;
+		    background: #fff;
+		    position: absolute;
+		    right: -42px;
+		    top: 23px;
+		    transform: rotate(41deg);
+		    box-shadow: 10px 0px 10px rgb(164, 166, 167) inset,
+		    0px 0px 0px #fff inset,
+		    0px 0px 0px #fff inset,
+		    0px 0px 0px #fff inset;
+		    text-align: center;
+	    	line-height: 40px;
+	    	color: #525252;	
+		}
 	.page-content{
 		position: absolute;
 	    top: 0;
@@ -480,19 +520,6 @@ body,html{
 } 
 
 .page-2{
-	.catalog-title{
-		height: 40px;
-	    width: 200px;
-	    background: #fff;
-	    position: absolute;
-	    right: -42px;
-	    top: 23px;
-	    transform: rotate(41deg);
-	    box-shadow: 10px 0px 10px rgb(164, 166, 167) inset,
-	    0px 0px 0px #fff inset,
-	    0px 0px 0px #fff inset,
-	    0px 0px 0px #fff inset;
-	}
 	.company-logo{
 		position: absolute;
 		top:30px;
@@ -513,9 +540,95 @@ body,html{
 	}
 }
 
+.page-3{
+	.company-logo{
+		position: absolute;
+		top:30px;
+		left: 30px;
+		background: url(../img/img-cat.jpg) #fff no-repeat center;
+	    background-size: 80%;
+	    width: 220px;
+	    height: 220px;
+	    border-radius: 50%;
+	    transition: all 0.5s ease-out;
+	}
+	.company-logo:hover{
+		// transform:translateX(0px) translateY(0px); 
+		transform:scale3d(1.1,1.1,1.1);
+		-webkit-transform:scale3d(1.1,1.1,1.1);
+		box-shadow:5px 5px 15px #9c9999;
 
+	}
+}
+.page-4{
+	.company-logo{
+		position: absolute;
+		top:30px;
+		left: 30px;
+		background: url(../img/logo-default.png) no-repeat center;
+	    background-size: 180%;
+	    width: 220px;
+	    height: 220px;
+	    border-radius: 50%;
+	    transition: all 0.5s ease-out;
+	}
+	.company-logo:hover{
+		// transform:translateX(0px) translateY(0px); 
+		transform:scale3d(1.1,1.1,1.1);
+		-webkit-transform:scale3d(1.1,1.1,1.1);
+		box-shadow:5px 5px 15px #9c9999;
 
+	}
+}
 
+// page-5
+.page-5{
+	.skill-box{
+		width: 70%;
+	    margin: auto;
+	    position: relative;
+	    top: 15%;
+	    overflow: hidden;
+		.box-item{
+			overflow: hidden;
+		    margin: 0 0 20px;
+			.skill-name{
+				width: 20%;
+				float: left;
+			    line-height: 64px;
+			    font-size: 32px;
+			}
+			.skill-grade{
+				float: left;
+				margin: 0 0 0 50px;	
+			}	
+		}
+	}
+}
+
+.skill{
+	width: 64px;
+	height: 64px;
+	display: block;
+	float: left;
+	margin: 0 10px 0 0;
+}
+.skill-1:before{
+	content:url('../img/icon-18.svg');
+	position: absolute;
+}
+.skill-1-light:after{
+	content: url('../img/icon-18-light.svg');
+	position: absolute;
+}
+.skill-2:before{
+	content:url('../img/icon-19.svg');
+	position: absolute;
+}
+.skill-2-light:after{
+	content: url('../img/icon-19-light.svg');
+	position: absolute;
+}
 
 
 
@@ -531,13 +644,22 @@ body,html{
 		 // -webkit-transform: rotate(108deg);
 		// background: url('../img/icon-down-black.png');
 		// background: #ccc;
+		display: none;
 	}
 	to{
 		 // -webkit-transform: rotate(8deg);
 		// background: url("../img/icon-down-white.png") no-repeat center;
 		// background: #fff;
-		background-size: 35%;
-		background: url("../img/icon-down-white.png") no-repeat center;
+		display: block;
+	}
+}
+
+@-webkit-keyframes 'line-1'{
+	from{
+		width:100%;
+	}
+	to{
+		// width:80px;
 	}
 }
 

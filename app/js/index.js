@@ -1,12 +1,17 @@
- 
-
+ /*
+  *@author wilson Duweihao
+  */
 var swiper = new Swiper('.swiper-container', {
     pagination: '.swiper-pagination',
     direction: 'vertical',
     slidesPerView: 1,
     paginationClickable: true,
     spaceBetween: 30,
-    mousewheelControl: true
+    mousewheelControl: true,
+    onSliderMove:function(swiper,event){
+        console.log('fff');
+        console.log(swiper);
+    }
     // loop: true,
 
     // 如果需要分页器
@@ -104,6 +109,9 @@ var changePosition = function(){
             var $target = $(e.currentTarget);
             var index = $target.index();
             swiper.slideTo(index+1);
+        })
+        $('.next-page').on('click',function(e){
+            swiper.slideNext();
         })
 
     })()

@@ -21,7 +21,8 @@ body, html {
   .sidebar .top {
     width: 60px;
     height: 60px;
-    background: #1957fe; }
+    background: #1957fe;
+    cursor: pointer; }
   .sidebar .page-num-list {
     list-style: none;
     padding: 0;
@@ -58,6 +59,13 @@ body, html {
         transition: all 0.4s cubic-bezier(0.615, 0.19, 0.305, 0.91);
         -webkit-transition: all 0.4s cubic-bezier(0.615, 0.19, 0.305, 0.91); }
       .sidebar .page-num-list li:nth-child(3):hover::before {
+        background: #ccc;
+        transform: rotate3d(0, 1, 0, 360deg); }
+      .sidebar .page-num-list li:nth-child(4):before {
+        content: '4';
+        transition: all 0.4s cubic-bezier(0.615, 0.19, 0.305, 0.91);
+        -webkit-transition: all 0.4s cubic-bezier(0.615, 0.19, 0.305, 0.91); }
+      .sidebar .page-num-list li:nth-child(4):hover::before {
         background: #ccc;
         transform: rotate3d(0, 1, 0, 360deg); }
 
@@ -168,14 +176,20 @@ body, html {
     background: #1957fe;
     position: absolute;
     top: 0;
-    border-radius: 50px; }
+    border-radius: 50px;
+    -webkit-animation-name: 'line-1';
+    -webkit-animation-duration: 1s;
+    -webkit-animation-timing-function: ease-in-out; }
   .name-block .top-line-2 {
     width: 60px;
     height: 5px;
     background: #1957fe;
     position: absolute;
     top: 10px;
-    border-radius: 50px; }
+    border-radius: 50px;
+    -webkit-animation-name: 'line-1';
+    -webkit-animation-duration: 1s;
+    -webkit-animation-timing-function: ease-in-out; }
   .name-block .bottom-line-1 {
     width: 60px;
     height: 5px;
@@ -183,7 +197,10 @@ body, html {
     position: absolute;
     bottom: 15px;
     right: 0;
-    border-radius: 50px; }
+    border-radius: 50px;
+    -webkit-animation-name: 'line-1';
+    -webkit-animation-duration: 1s;
+    -webkit-animation-timing-function: ease-in-out; }
   .name-block .bottom-line-2 {
     width: 80px;
     height: 5px;
@@ -191,10 +208,25 @@ body, html {
     position: absolute;
     bottom: 5px;
     right: 0;
-    border-radius: 50px; }
+    border-radius: 50px;
+    -webkit-animation-name: 'line-1';
+    -webkit-animation-duration: 1s;
+    -webkit-animation-timing-function: ease-in-out; }
 
 .page {
   overflow: hidden; }
+  .page .catalog-title {
+    height: 40px;
+    width: 200px;
+    background: #fff;
+    position: absolute;
+    right: -42px;
+    top: 23px;
+    transform: rotate(41deg);
+    box-shadow: 10px 0px 10px #a4a6a7 inset, 0px 0px 0px #fff inset, 0px 0px 0px #fff inset, 0px 0px 0px #fff inset;
+    text-align: center;
+    line-height: 40px;
+    color: #525252; }
   .page .page-content {
     position: absolute;
     top: 0;
@@ -395,16 +427,6 @@ body, html {
     left: 125px;
     top: 130px; }
 
-.page-2 .catalog-title {
-  height: 40px;
-  width: 200px;
-  background: #fff;
-  position: absolute;
-  right: -42px;
-  top: 23px;
-  transform: rotate(41deg);
-  box-shadow: 10px 0px 10px #a4a6a7 inset, 0px 0px 0px #fff inset, 0px 0px 0px #fff inset, 0px 0px 0px #fff inset; }
-
 .page-2 .company-logo {
   position: absolute;
   top: 30px;
@@ -421,8 +443,86 @@ body, html {
   -webkit-transform: scale3d(1.1, 1.1, 1.1);
   box-shadow: 5px 5px 15px #9c9999; }
 
+.page-3 .company-logo {
+  position: absolute;
+  top: 30px;
+  left: 30px;
+  background: url(../img/img-cat.jpg) #fff no-repeat center;
+  background-size: 80%;
+  width: 220px;
+  height: 220px;
+  border-radius: 50%;
+  transition: all 0.5s ease-out; }
+
+.page-3 .company-logo:hover {
+  transform: scale3d(1.1, 1.1, 1.1);
+  -webkit-transform: scale3d(1.1, 1.1, 1.1);
+  box-shadow: 5px 5px 15px #9c9999; }
+
+.page-4 .company-logo {
+  position: absolute;
+  top: 30px;
+  left: 30px;
+  background: url(../img/logo-default.png) no-repeat center;
+  background-size: 180%;
+  width: 220px;
+  height: 220px;
+  border-radius: 50%;
+  transition: all 0.5s ease-out; }
+
+.page-4 .company-logo:hover {
+  transform: scale3d(1.1, 1.1, 1.1);
+  -webkit-transform: scale3d(1.1, 1.1, 1.1);
+  box-shadow: 5px 5px 15px #9c9999; }
+
+.page-5 .skill-box {
+  width: 70%;
+  margin: auto;
+  position: relative;
+  top: 15%;
+  overflow: hidden; }
+  .page-5 .skill-box .box-item {
+    overflow: hidden;
+    margin: 0 0 20px; }
+    .page-5 .skill-box .box-item .skill-name {
+      width: 20%;
+      float: left;
+      line-height: 64px;
+      font-size: 32px; }
+    .page-5 .skill-box .box-item .skill-grade {
+      float: left;
+      margin: 0 0 0 50px; }
+
+.skill {
+  width: 64px;
+  height: 64px;
+  display: block;
+  float: left;
+  margin: 0 10px 0 0; }
+
+.skill-1:before {
+  content: url("../img/icon-18.svg");
+  position: absolute; }
+
+.skill-1-light:after {
+  content: url("../img/icon-18-light.svg");
+  position: absolute; }
+
+.skill-2:before {
+  content: url("../img/icon-19.svg");
+  position: absolute; }
+
+.skill-2-light:after {
+  content: url("../img/icon-19-light.svg");
+  position: absolute; }
+
 @-webkit-keyframes 'hightdown' {
-  from { }
+  from {
+    display: none; }
   to {
-    background-size: 35%;
-    background: url("../img/icon-down-white.png") no-repeat center; } }
+    display: block; } }
+
+@-webkit-keyframes 'line-1' {
+  from {
+    width: 100%; }
+  to { } }
