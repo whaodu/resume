@@ -508,19 +508,35 @@ body, html {
   margin: 0 10px 0 0; }
 
 .skill-1:before {
-  content: url("../img/icon-18.svg");
+  content: '';
+  background: url("../img/icon-18.png") no-repeat center;
+  background-size: 100%;
+  width: 64px;
+  height: 64px;
   position: absolute; }
 
 .skill-1-light:after {
-  content: url("../img/icon-18-light.svg");
+  content: '';
+  background: url("../img/icon-18-light.png") no-repeat center;
+  background-size: 100%;
+  width: 64px;
+  height: 64px;
   position: absolute; }
 
 .skill-2:before {
-  content: url("../img/icon-19.svg");
+  content: '';
+  background: url("../img/icon-19.png") no-repeat center;
+  background-size: 100%;
+  width: 64px;
+  height: 64px;
   position: absolute; }
 
 .skill-2-light:after {
-  content: url("../img/icon-19-light.svg");
+  content: '';
+  background: url("../img/icon-19-light.png") no-repeat center;
+  background-size: 100%;
+  width: 64px;
+  height: 64px;
   position: absolute; }
 
 .page-6 .pic {

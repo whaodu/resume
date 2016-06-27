@@ -44,7 +44,7 @@ var graphFloat = function(event,el){
     // el.css("top",top+'px');
     // el.css("left",left+'px');
     el.css("transform","translate3d("+left+"px,"+top+"px,0)");
-
+    
 }
 
 var logoFloat = function(event,el){
