@@ -1,3 +1,3 @@
-# 个人介绍
+# 个人简历
 
-###好像没什么好介绍的样子，哈哈哈
+###个人线上简历 link:http://whaodu.github.io/resume
